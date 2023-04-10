@@ -1,4 +1,5 @@
 const quoteContainer = document.getElementById('quote-container');
+const quoteCategory = document.getElementById('category');
 const quoteText = document.getElementById('quote');
 const authorText = document.getElementById('author');
 const twitterBtn = document.getElementById('twitter');
@@ -32,13 +33,15 @@ function newQuote() {
     authorText.textContent = quote.author;
   }
   //check Quote length to determine styling
-  if (quote.text.length > 120) {
+  if (quote.text.length > 100) {
     quoteText.classList.add('long-quote');
   } else {
     quoteText.classList.remove('long-quote');
   }
   // Set Quote, Hide Loader
   quoteText.textContent = quote.text;
+
+  quoteCategory.textContent = quote.tag;
   removeLoadingSpinner();
 }
 
