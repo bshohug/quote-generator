@@ -23,10 +23,8 @@ function newQuote() {
   showLoadingSpinner();
   //Pick a random Quotr frm apiQuotes array
   const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-  //console.log(quote);
 
   //Check if Author field is blank and replace it with 'Unknown'
-
   if (!quote.author) {
     authorText.textContent = 'Unknown';
   } else {
